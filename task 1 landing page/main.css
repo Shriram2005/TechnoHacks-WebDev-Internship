@@ -156,7 +156,7 @@ Nav {
     background-position: cover;
     align-items: center;
     flex-direction: column;
-    background-image: url("/contents/bg2.avif");
+    background-image: url("./contents/bg2.avif");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
