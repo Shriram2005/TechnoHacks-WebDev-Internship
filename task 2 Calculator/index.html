@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="title-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+
+</head>
+
+<body>
+  <form class="calculator" name="calc">
+    <textarea name="txt" readonly class="value" rows="3"></textarea>
+    <span class="num clear btn2" onclick="clearValue()">A/C</span>
+    <span class="num clear btn2" onclick="backspace()"><i class="fa-solid fa-delete-left fa-lg"></i></span>
+    <span class="num btn2" onclick="addPercentage()"><i class="fa-solid fa-percent fa-lg"></i></span>
+    <span class="num btn2" onclick="appendText('/')"><i class="fa-solid fa-divide fa-lg"></i></span>
+
+    <span class="num" onclick="appendText('7')">7</span>
+    <span class="num" onclick="appendText('8')">8</span>
+    <span class="num" onclick="appendText('9')">9</span>
+    <span class="num btn2" onclick="appendText('*')"><i class="fa-solid fa-xmark fa-lg"></i></span>
+
+    <span class="num" onclick="appendText('4')">4</span>
+    <span class="num" onclick="appendText('5')">5</span>
+    <span class="num" onclick="appendText('6')">6</span>
+    <span class="num btn2" onclick="appendText('-')"><i class="fa-solid fa-minus fa-lg"></i></span>
+
+    <span class="num" onclick="appendText('1')">1</span>
+    <span class="num" onclick="appendText('2')">2</span>
+    <span class="num" onclick="appendText('3')">3</span>
+    <span class="num plus btn2" onclick="appendText('+')"><i class="fa-solid fa-plus fa-lg"></i></span>
+
+    <span class="num" onclick="appendText('.')">.</span>
+    <span class="num" onclick="appendText('00')">00</span>
+    <span class="num" onclick="appendText('0')">0</span>
+    <span class="num equal btn2" onclick="calculateResult()"><i class="fa-solid fa-equals fa-lg"></i></span>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* background, body  */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: rgb(255, 178, 89);
+}
+
+
+/* center box , main div  */
+.calculator {
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px 30px;
+    padding: 20px;
+    background-color: black;
+    color: red;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* output area  */
+textarea {
+    height: 80px;
+    font-size: 35px;
+    background-color: rgb(202, 202, 202);
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 80px;
+    grid-column: 1/5;
+    overflow: hidden;
+    resize: none;
+}
+
+/* all button  */
+.num {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    background-color: black;
+    border-radius: 35% 10%;
+    transition-duration: .1s;
+}
+
+/* special button  */
+.btn2 {
+    color: #ff5922;
+    font-size: 16px;
+}
+
+/* hover effects ------------------------------------------- */
+.num:hover {
+    background-color: #ff5922;
+}
+
+.btn2:hover {
+    background-color: #ff5922;
+    color: white;
+}
+
+/* responsiveness / media queries -------------------- */
+
+@media (width< 460px) {
+
+    html,
+    body {
+        background-color: black;
+    }
+
+    .calculator {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        padding: 0px 10px 10px 10px;
+        gap: 0px 0px;
+    }
+
+    .num {
+        margin: 2vw 4vw;
+    }
+
+    textarea {
+        height: 35vh;
+        padding-top: 20vh;
+        background-color: black;
+        color: white;
+        place-content: center;
+    }
+
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Gallery</title>
+    <script src="https://kit.fontawesome.com/85a51766c8.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #heading {
+            padding: 30px;
+            padding-top: 70px;
+            text-align: center;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .images {
+            padding-bottom: 30px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: 1fr;
+        }
+
+        .images img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        @media (width>600px) {
+            .images{
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./contents/techno-hacks-logo.png" alt="logo" width='120px'>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="Gallery.html">Designs</a>
+            <a href="#">Marketing</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div class="sidebar-btn" onclick="sideSwipe()">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </div>
+
+    </nav>
+    <!-- side menu / side navbar -->
+
+    <div class="side-menu">
+        <img src="./contents/techno-hacks-logo.png" alt="logo" width='120px' id="side-menu-img">
+        <a href="index.html">Home</a>
+        <a href="Gallery.html">Designs</a>
+        <a href="#">Marketing</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <div class="black-effect" onclick="removeBlack()"></div>
+
+
+
+    <div id="heading">GALLERY</div>
+
+    <!-- images gallery -->
+    <div class="images">
+        <Img class="img" src="GalleryImages\4.jpg">
+        <Img class="img" src="GalleryImages\2.jpg">
+        <Img class="img" src="GalleryImages\6.jpg">
+        <Img class="img" src="GalleryImages\10.jpg">
+        <Img class="img" src="GalleryImages\11.jpg">
+        <Img class="img" src="GalleryImages\12.jpg">
+        <Img class="img" src="GalleryImages\13.jpg">
+        <Img class="img" src="GalleryImages\14.jpeg">
+        <Img class="img" src="GalleryImages\15.jpg">
+        <Img class="img" src="GalleryImages\16.jpg">
+        <Img class="img" src="GalleryImages\17.jpg">
+        <Img class="img" src="GalleryImages\1.jpg">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
